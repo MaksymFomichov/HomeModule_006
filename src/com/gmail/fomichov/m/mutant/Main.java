@@ -55,9 +55,14 @@ public class Main extends Application {
         buttonRed.setTranslateY(190);
         buttonRed.setText("Закрасить мутанта в красный");
 
+        Button buttonGrad = new Button();
+        buttonGrad.setTranslateX(10);
+        buttonGrad.setTranslateY(220);
+        buttonGrad.setText("Gradient");
+
         Pane root = new Pane();
         root.getChildren().addAll(textCount, textMinRadius, textMaxRadius,
-                countCircle, minRadius, maxRadius, button, buttonRed);
+                countCircle, minRadius, maxRadius, button, buttonRed, buttonGrad);
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -82,12 +87,17 @@ public class Main extends Application {
             minRadius.setText(String.valueOf(minRad));
             maxRadius.setText(String.valueOf(maxRad));
             root.getChildren().addAll(textCount, textMinRadius, textMaxRadius,
-                    countCircle, minRadius, maxRadius, button, buttonRed);
+                    countCircle, minRadius, maxRadius, button, buttonRed, buttonGrad);
         });
 
         // обрабатываем нажате на кнопку "закрасить красным"
         buttonRed.setOnMouseClicked(event -> {
             getBodyMutant.changeColorToRed();
+        });
+
+        // обрабатываем нажате на кнопку "Gradient"
+        buttonGrad.setOnMouseClicked(event -> {
+            getBodyMutant.changeColorToGradient();
         });
     }
 

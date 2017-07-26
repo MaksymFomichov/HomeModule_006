@@ -48,7 +48,7 @@ public class GetBodyMutant {
     }
 
     // меняем цвет на красный
-    public void changeColorToRed(){
+    public void changeColorToRed() {
         for (int i = 0; i < circles.length; i++) {
             circles[i].setFill(Color.RED);
         }
@@ -81,5 +81,17 @@ public class GetBodyMutant {
         Random random = new Random();
         Color color = Color.color(random.nextDouble(), random.nextDouble(), random.nextDouble(), 0.5f);
         return color.toString();
+    }
+
+    // меняем цвет кругов на градиент серого
+    public void changeColorToGradient() {
+        int countStep = 255 / circles.length;
+        int valueColor = 0;
+        for (int i = 0; i < circles.length; i++) {
+            Color color = Color.rgb(valueColor, valueColor, valueColor);
+            System.out.println(valueColor);
+            valueColor = valueColor + countStep;
+            circles[i].setFill(color);
+        }
     }
 }
