@@ -10,6 +10,7 @@ public class GetBodyMutant {
     private int countParts;
     private int minRadius;
     private int maxRadius;
+
     private Circle[] circles;
     private Circle[] circleHead;
 
@@ -46,6 +47,7 @@ public class GetBodyMutant {
         return circleHead;
     }
 
+    // меняем цвет на красный
     public void changeColorToRed(){
         for (int i = 0; i < circles.length; i++) {
             circles[i].setFill(Color.RED);
