@@ -3,8 +3,6 @@ package com.gmail.fomichov.m.function;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
-import java.util.Arrays;
-
 public class GetFunction {
 
 
@@ -28,7 +26,7 @@ public class GetFunction {
     }
 
     private double getRealX(double x) {
-        return Main.WIDTH_SCREEN / 2 - x;
+        return Main.WIDTH_SCREEN / 2 + x;
     }
 
     private double getRealY(double y) {
