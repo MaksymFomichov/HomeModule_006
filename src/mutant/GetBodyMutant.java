@@ -1,4 +1,4 @@
-package com.gmail.fomichov.m.mutant;
+package mutant;
 
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;

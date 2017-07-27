@@ -1,4 +1,4 @@
-package com.gmail.fomichov.m.function;
+package function;
 
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;

@@ -1,4 +1,4 @@
-package com.gmail.fomichov.m.function;
+package function;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

@@ -1,4 +1,4 @@
-package com.gmail.fomichov.m.star;
+package star;
 
 /*
  * решение нашел тут https://stackoverflow.com/questions/16327588/how-to-make-star-shape-in-java

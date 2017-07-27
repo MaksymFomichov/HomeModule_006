@@ -1,4 +1,4 @@
-package com.gmail.fomichov.m.mutant;
+package mutant;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import mutant.GetBodyMutant;
 
 public class Main extends Application {
     public static final int WIDTH_SCREEN = 800;
