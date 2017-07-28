@@ -17,7 +17,7 @@ public class GetFunction {
         int value = -400;
         Circle[] circles = new Circle[value * -2 + 1];
         for (int i = 0; i < circles.length; i++) {
-            circles[i] = new Circle(getRealX(value), getRealY(Math.pow(value, 2)), 2);
+            circles[i] = new Circle(getX(value), getY(Math.pow(value, 2)), 2);
             //circles[i] = new Circle(getRealX(value), getRealY(Math.pow(value, 3)), 2);
             // circles[i] = new Circle(getRealX(value), getRealY(Math.cos(value)), 2);
             value++;
@@ -25,11 +25,25 @@ public class GetFunction {
         return circles;
     }
 
-    private double getRealX(double x) {
-        return Main.WIDTH_SCREEN / 2 + x;
+    // пересчет координаты X
+    public double getX(double x) {
+        if (x < 0) {
+            return Main.WIDTH_SCREEN / 2 - (x * -1);
+        } else if (x > 0) {
+            return Main.WIDTH_SCREEN / 2 + x;
+        } else {
+            return Main.WIDTH_SCREEN / 2;
+        }
     }
 
-    private double getRealY(double y) {
-        return Main.HEIGHT_SCREEN / 2 - y;
+    // пересчет координаты Y
+    public double getY(double y) {
+        if (y < 0) {
+            return Main.HEIGHT_SCREEN / 2 + (y * -1);
+        } else if (y > 0) {
+            return Main.HEIGHT_SCREEN / 2 - y;
+        } else {
+            return Main.HEIGHT_SCREEN / 2;
+        }
     }
 }
